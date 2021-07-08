@@ -36,6 +36,15 @@ int main()
 		init_pair(2, COLOR_WHITE, COLOR_BLACK);	// 色2 は黒地に白文字
 		init_pair(3, COLOR_GREEN, COLOR_BLACK);	// 色2 は黒地に緑文字
 
+		mvaddstr(15, 40, "Press S to start!!");
+		while (true) {
+			key = getch();
+			if (key == 'S' || key == 's') {
+				break;
+			}
+		}
+		
+
 		while (true) {
 			erase();	//迷路をクリアするごとに内側のwhile文を抜けてここに戻ってくる
 
