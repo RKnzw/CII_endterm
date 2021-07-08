@@ -44,6 +44,7 @@ int main()
 			myMaze->ySize = ySize;
 			myMaze->xSize = xSize;
 
+			attrset(COLOR_PAIR(2));
 			mvaddstr(29, 0, "making maze...");
 			refresh();
 			makeMaze(myMaze);	//迷路の生成
@@ -63,6 +64,8 @@ int main()
 					}
 				}
 			}
+			attrset(COLOR_PAIR(2));
+			mvprintw(29, 40, "maze%d", cnt);
 
 			player myPlayer{ 1, 1 };	//プレイヤーの座標を初期化
 
@@ -97,7 +100,7 @@ int main()
 					}
 				}
 
-				if (myPlayer.x == myMaze->xSize - 2 && myPlayer.y == myMaze->ySize - 2) {	//左下のゴールに来たら迷路クリア。
+				if (myPlayer.x == myMaze->xSize - 2 && myPlayer.y == myMaze->ySize - 2) {	//右下のゴールに来たら迷路クリア。
 					cnt++;	//迷路の数を更新
 					break;	//迷路の情報を更新するためにbreakで内側のwhile文を抜ける
 				}

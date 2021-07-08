@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <Windows.h>
 #include <curses.h>
+#include <time.h>
 
 #define BUFFSIZE 1024
 #define XSTART 1
