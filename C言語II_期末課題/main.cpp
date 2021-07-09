@@ -76,7 +76,7 @@ int main()
 			attrset(COLOR_PAIR(2));
 			mvprintw(29, 40, "maze%d", cnt);
 
-			player myPlayer{ 1, 1 };	//プレイヤーの座標を初期化
+			player myPlayer{ XSTART, YSTART };	//プレイヤーの座標を初期化
 
 			while (true) {	//迷路をプレイ中の処理
 				attrset(COLOR_PAIR(1));
@@ -116,8 +116,6 @@ int main()
 			}
 		}
 	}
-
-
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
